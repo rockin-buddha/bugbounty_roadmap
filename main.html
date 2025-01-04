@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Bounty Roadmap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .popup {
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            margin: 10px auto;
+            display: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-title {
+            background-color: #2a2a2a;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .section-title:hover {
+            background-color: #444;
+        }
+
+        .close-btn {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            float: right;
+        }
+
+        .close-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .popup-content {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bug Bounty Roadmap</h1>
+
+        <!-- Section: Community and Networking -->
+        <div class="section-title" onclick="showPopup('community-popup')">Community and Networking</div>
+
+        <div id="community-popup" class="popup">
+            <button class="close-btn" onclick="closePopup('community-popup')">Close</button>
+            <div class="popup-content">
+                <h2>Community and Networking</h2>
+                <p>Join Bug Bounty platforms like HackerOne, Bugcrowd, and Synack to interact with the community. 
+                Participate in cybersecurity forums and groups like Reddit, Stack Overflow, and InfoSec Write-ups. 
+                Seek mentorship or become a mentor to others, expanding your network in the cybersecurity space.</p>
+            </div>
+        </div>
+
+        <!-- Section: Tools of the Trade -->
+        <div class="section-title" onclick="showPopup('tools-popup')">Tools of the Trade</div>
+
+        <div id="tools-popup" class="popup">
+            <button class="close-btn" onclick="closePopup('tools-popup')">Close</button>
+            <div class="popup-content">
+                <h2>Tools of the Trade</h2>
+                <p>Use tools like Burp Suite, OWASP ZAP, SQLmap, Nikto, and others for reconnaissance, exploitation, and post-exploitation.
+                Familiarize yourself with different tools to enhance your bug bounty efforts. Learn about recon tools (e.g., Sublist3r, Shodan),
+                exploitation tools (e.g., SQLmap, Burp Suite), and post-exploitation tools (e.g., Metasploit, Empire).</p>
+            </div>
+        </div>
+
+        <!-- Add more sections here as per the roadmap -->
+
+    </div>
+
+    <script>
+        function showPopup(popupId) {
+            document.getElementById(popupId).style.display = "block";
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
