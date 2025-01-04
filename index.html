@@ -1,165 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bug Bounty Roadmap</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0e0e0e;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #121212;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #f1f1f1;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 50px;
-      box-sizing: border-box;
-    }
-    .popup-content {
-      background-color: #222;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .popup h2 {
-      color: #f1f1f1;
-    }
-    .close-btn {
-      background-color: red;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .popup-btn {
-      background-color: #333;
-      color: white;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      text-align: left;
-      font-size: 16px;
-    }
-    .popup-btn:hover {
-      background-color: #444;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Bounty Roadmap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 3em;
+            color: #ff4d4d;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 2em;
+            color: #ff4d4d;
+        }
+        .section h3 {
+            font-size: 1.5em;
+            color: #ff80b3;
+        }
+        .section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .section ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .section ul li span {
+            font-weight: bold;
+        }
+        .section p {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Bug Bounty Roadmap</h1>
+    </header>
 
-<header>
-  <h1>Bug Bounty Roadmap</h1>
-</header>
+    <div class="content">
+        <!-- Section 1 -->
+        <div class="section">
+            <h2>1. Introduction to Bug Bounty</h2>
+            <p><strong>What is Bug Bounty?</strong></p>
+            <ul>
+                <li><span>Definition:</span> Bug bounty programs are initiatives where organizations reward ethical hackers for identifying vulnerabilities in their systems.</li>
+                <li><span>Major Platforms:</span> HackerOne, Bugcrowd, and Synack are some popular platforms offering bug bounty programs.</li>
+            </ul>
+            <p><strong>Why Bug Bounty?</strong></p>
+            <ul>
+                <li><span>Importance of Ethical Hacking:</span> Ethical hackers help secure systems by finding vulnerabilities before malicious actors can exploit them.</li>
+                <li><span>Benefits for Organizations:</span> Bug bounty programs offer a cost-effective way to find vulnerabilities while improving security.</li>
+            </ul>
+            <p><strong>Getting Started</strong></p>
+            <ul>
+                <li><span>Set up Accounts:</span> Create accounts on Bugcrowd, HackerOne, and other platforms to participate in bug bounty programs.</li>
+                <li><span>Responsible Disclosure:</span> Understand and adhere to responsible disclosure practices when reporting vulnerabilities.</li>
+            </ul>
+        </div>
 
-<div class="container">
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('intro')">1. Introduction to Bug Bounty</button>
-  </div>
+        <!-- Section 2 -->
+        <div class="section">
+            <h2>2. Pre-Requisites</h2>
+            <h3>Basic Skills</h3>
+            <ul>
+                <li><span>HTML, CSS, JavaScript:</span> Basic understanding of how websites function.</li>
+                <li><span>HTTP/S Protocols:</span> Learn about methods like GET, POST, Headers, and Cookies.</li>
+                <li><span>OWASP Top 10:</span> Familiarize yourself with common vulnerabilities in web applications.</li>
+            </ul>
+            <h3>Set up Your Environment</h3>
+            <ul>
+                <li><span>Kali Linux/Parrot OS:</span> Install penetration testing operating systems for effective bug hunting.</li>
+                <li><span>Tools Setup:</span> Install Burp Suite, OWASP ZAP, and other essential hacking tools.</li>
+                <li><span>Testing Environment:</span> Set up virtual machines or dedicated testing environments for practice.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('preReq')">2. Pre-Requisites</button>
-  </div>
+        <!-- Section 3 -->
+        <div class="section">
+            <h2>3. Bug Bounty Fundamentals</h2>
+            <h3>Understanding Vulnerability Types</h3>
+            <ul>
+                <li><span>SQL Injection:</span> Techniques for exploiting SQL vulnerabilities.</li>
+                <li><span>Command Injection:</span> Exploiting flaws in input validation that allow the execution of arbitrary commands.</li>
+                <li><span>XSS (Cross-Site Scripting):</span> Attacks that involve injecting malicious scripts into trusted websites.</li>
+                <li><span>CSRF (Cross-Site Request Forgery):</span> Exploiting the trust that a website has in the user's browser.</li>
+                <li><span>File Inclusion:</span> Manipulating web applications to include local or remote files.</li>
+            </ul>
+            <h3>Common Bug Bounty Vulnerabilities</h3>
+            <ul>
+                <li><span>Authentication Vulnerabilities:</span> Issues like session hijacking and login bypass.</li>
+                <li><span>Insecure Deserialization:</span> Exploiting flawed deserialization processes to execute arbitrary code.</li>
+                <li><span>API Vulnerabilities:</span> Issues like unauthorized access via broken APIs.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('fundamentals')">3. Bug Bounty Fundamentals</button>
-  </div>
+        <!-- Section 4 -->
+        <div class="section">
+            <h2>4. Tools of the Trade</h2>
+            <h3>Reconnaissance Tools</h3>
+            <ul>
+                <li><span>Fang:</span> Your tool for automated reconnaissance and gathering information.</li>
+                <li><span>Sublist3r:</span> Subdomain discovery tool.</li>
+                <li><span>Shodan:</span> Search engine for finding exposed devices and services.</li>
+            </ul>
+            <h3>Exploitation Tools</h3>
+            <ul>
+                <li><span>Burp Suite:</span> Proxy tool for web vulnerability scanning.</li>
+                <li><span>SQLmap:</span> Automated tool for SQL injection and database takeover.</li>
+                <li><span>Nikto:</span> Web server scanner for detecting flaws.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('tools')">4. Tools of the Trade</button>
-  </div>
+        <!-- Section 5 -->
+        <div class="section">
+            <h2>5. Methodologies</h2>
+            <h3>Reconnaissance (OSINT)</h3>
+            <ul>
+                <li><span>Passive Reconnaissance:</span> Gathering information without interacting with the target.</li>
+                <li><span>Active Reconnaissance:</span> Actively scanning the target for potential vulnerabilities.</li>
+            </ul>
+            <h3>Scanning and Enumeration</h3>
+            <ul>
+                <li><span>Port Scanning:</span> Identifying open ports and services.</li>
+                <li><span>Vulnerability Scanning:</span> Scanning for web application vulnerabilities.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('methodologies')">5. Methodologies</button>
-  </div>
+        <!-- Section 6 -->
+        <div class="section">
+            <h2>6. Learning Path</h2>
+            <h3>Beginner Level</h3>
+            <ul>
+                <li><span>Learn Basics:</span> Focus on web technologies and OWASP Top 10 vulnerabilities.</li>
+                <li><span>Basic Tools:</span> Get comfortable with tools like Burp Suite and ZAP.</li>
+            </ul>
+            <h3>Intermediate Level</h3>
+            <ul>
+                <li><span>Advanced Tools:</span> Learn to use SQLmap, Burp Suite Pro, Nikto, and others.</li>
+                <li><span>Vulnerability Identification:</span> Hunt for SQL Injection, XSS, CSRF, etc.</li>
+            </ul>
+            <h3>Advanced Level</h3>
+            <ul>
+                <li><span>Exploit Development:</span> Learn to write custom exploits.</li>
+                <li><span>Red Teaming:</span> Master offensive security strategies and tactics.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('learning')">6. Learning Path</button>
-  </div>
+        <!-- Section 7 -->
+        <div class="section">
+            <h2>7. Best Practices</h2>
+            <ul>
+                <li><span>Always Be Ethical:</span> Adhere to ethical guidelines when participating in bug bounty programs.</li>
+                <li><span>Automate Your Workflow:</span> Automate repetitive tasks like recon and scanning.</li>
+                <li><span>Stay Updated:</span> Keep learning about new vulnerabilities and tools.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('bestPractices')">7. Best Practices</button>
-  </div>
+        <!-- Section 8 -->
+        <div class="section">
+            <h2>8. Advanced Strategies</h2>
+            <ul>
+                <li><span>Web Shells:</span> Using web shells for remote command execution.</li>
+                <li><span>Cloud Exploitation:</span> Attacking misconfigurations in cloud platforms like AWS, GCP, and Azure.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('advanced')">8. Advanced Strategies</button>
-  </div>
+        <!-- Section 9 -->
+        <div class="section">
+            <h2>9. CTF Challenges</h2>
+            <ul>
+                <li><span>Participate in CTFs:</span> Join platforms like Hack The Box, TryHackMe, etc.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('ctf')">9. CTF Challenges</button>
-  </div>
+        <!-- Section 10 -->
+        <div class="section">
+            <h2>10. Certification and Recognition</h2>
+            <ul>
+                <li><span>Certifications:</span> Obtain certifications like OSCP, CEH, CPT.</li>
+                <li><span>Hall of Fame:</span> Aim to be recognized in Bug Bounty Hall of Fame.</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('certification')">10. Certification and Recognition</button>
-  </div>
-
-  <div class="section">
-    <button class="popup-btn" onclick="openPopup('community')">11. Community and Networking</button>
-  </div>
-</div>
-
-<div class="popup" id="intro">
-  <div class="popup-content">
-    <h2>1. Introduction to Bug Bounty</h2>
-    <p>Learn about what bug bounty programs are, why they are important, and how to get started with major platforms like HackerOne, Bugcrowd, etc.</p>
-    <button class="close-btn" onclick="closePopup('intro')">Close</button>
-  </div>
-</div>
-
-<div class="popup" id="preReq">
-  <div class="popup-content">
-    <h2>2. Pre-Requisites</h2>
-    <p>Understand the basic skills needed, such as HTML, CSS, JavaScript, and the HTTP/S protocol. Learn how to set up your environment with tools like Kali Linux and Burp Suite.</p>
-    <button class="close-btn" onclick="closePopup('preReq')">Close</button>
-  </div>
-</div>
-
-<div class="popup" id="fundamentals">
-  <div class="popup-content">
-    <h2>3. Bug Bounty Fundamentals</h2>
-    <p>Learn about different vulnerability types such as SQL Injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).</p>
-    <button class="close-btn" onclick="closePopup('fundamentals')">Close</button>
-  </div>
-</div>
-
-
-<script>
-  function openPopup(id) {
-    document.getElementById(id).style.display = "block";
-  }
-
-  function closePopup(id) {
-    document.getElementById(id).style.display = "none";
-  }
-</script>
-
+        <!-- Section 11 -->
+        <div class="section">
+            <h2>11. Community and Networking</h2>
+            <ul>
+                <li><span>Join Bug Bounty Platforms:</span> Participate in communities on HackerOne, Bugcrowd, and Synack.</li>
+                <li><span>Forums:</span> Engage in security forums like Reddit, Stack Overflow.</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
